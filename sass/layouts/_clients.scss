@@ -1,0 +1,94 @@
+
+.clients {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        }
+
+        &__item {
+            flex-basis: calc((100% - var(--indent)*(var(--items)))/var(--items));
+            
+                @media screen and (min-width: 320px) and (max-width: 767px) {
+            
+                    width: 100%;
+                    gap: var(--indent);
+                }
+            
+                @media screen and (min-width: 768px) {
+                    max-width: 768px;
+                }
+            
+                @media screen and (min-width: 1200px) {
+                    max-width: 1200px;
+                }
+        }
+
+  &__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.17;
+      text-align: center;
+
+      color: var(--subtitle-txt);
+  }
+}
+
+.client__list {
+    
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    
+    gap: var(--indent);
+    
+        @media screen  and (max-width: 767px) {
+            display: flex;
+            flex-wrap: wrap;
+            --items: 2;
+        }
+    
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            display: flex;
+            flex-wrap: wrap;
+            --items: 3;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: flex-start;
+            --items: 6;
+        }
+}
+
+.client__icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+
+.client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    color: #AFB1B8;
+
+    transition-property: color, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-txt-color);
+        border: 1px solid var(--accent-txt-color);
+    }
+}

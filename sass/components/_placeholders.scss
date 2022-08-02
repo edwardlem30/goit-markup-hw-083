@@ -1,0 +1,41 @@
+%icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+%link-map {
+    display: block;
+    margin-top: 20px;
+
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 1.71;
+
+    color: var(--bcg-color);
+
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* link to page */
+%link {
+    display: flex;
+
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    color: var(--primary-txt-color);
+}
+

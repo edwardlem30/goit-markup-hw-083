@@ -1,0 +1,55 @@
+// @import "./decimals";
+
+// @mixin fonts($fw, $fs, $lh, $ls: 0.03em) {$line-height: $lh/$fs;
+//     font-weight: $fw;
+//     font-size: $fs;
+//     line-height: decimal-round($line-height);
+// }
+
+
+@mixin button {
+    position: absolute;
+    left: 44%;
+    bottom: 34%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 200px;
+
+    padding: 10px 32px;
+    border: none;
+
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    background-color: var(--background);
+    color: var(--subtitle-txt);
+}
+
+@mixin filter-btn {
+        padding: 6px 22px;
+        font-family: var(--main-font), sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+
+        letter-spacing: 0.03em;
+
+        cursor: pointer;
+        color: var(--subtitle-txt);
+
+        background: #F5F4FA;
+        border-radius: 4px;
+        border: none;
+        text-transform: none;
+        transition-property: color, background-color, box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }

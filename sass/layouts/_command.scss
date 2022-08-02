@@ -1,0 +1,98 @@
+.command {
+    background-color: var(--background);
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+
+        color: var(--subtitle-txt);
+    }
+
+    &__img {
+        display: block;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+
+.command__item {
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    background-color: var(--bcg-color);
+
+    flex-basis: calc((100% - var(--indent)*var(--items))/var(--items));
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+    }
+}
+
+.command__list {
+    padding: 0px;
+    list-style: none;
+
+    gap: var(--indent);
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+
+        --items: 1;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        --items: 2;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        justify-content: flex-start;
+        --items: 4;
+    }
+
+    .command__item+.command__item {
+
+        margin-right: 0;
+
+        @media screen and (max-width: 480px) {
+
+            margin-top: 30px;
+        }
+    }
+}
+
+.command__person {
+    padding: 30px 0;
+
+    .subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--subtitle-txt);
+    }
+
+    .text {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        color: var(--primary-txt-color);
+    }
+}
